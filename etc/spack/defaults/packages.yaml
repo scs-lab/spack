@@ -50,4 +50,4 @@ packages:
     permissions:
       read: world
       write: group
-      group: spack
+      group: scs-io
