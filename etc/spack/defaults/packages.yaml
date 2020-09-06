@@ -29,7 +29,7 @@ packages:
       golang: [gcc]
       iconv: [libiconv]
       ipp: [intel-ipp]
-      java: [openjdk, jdk, ibm-java]
+      java: [openjdk, jdk]
       jpeg: [libjpeg-turbo, libjpeg]
       lapack: [openblas]
       mariadb-client: [mariadb-c-client, mariadb]
@@ -49,5 +49,4 @@ packages:
       sycl: [hipsycl]
     permissions:
       read: world
-      write: group
-      group: scs-io
+      write: world

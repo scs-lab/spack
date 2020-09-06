@@ -14,8 +14,8 @@ else
 fi
 SCRIPT_DIR=`pwd`
 REPO_DIR="$(dirname "$SCRIPT_DIR")"
-VERSION=`git branch | awk '{print$2}'`
-SPACK_INSTALL_DIR=SPACK_INSTALL_DIR_ORIG/$VERSION
+VERSION=`git branch | awk '{print$2}' | sed ':a;N;$!ba;s/\n//g'`
+SPACK_INSTALL_DIR=${SPACK_INSTALL_DIR_ORIG}/$VERSION
 
 BINARY_DIR=${SPACK_INSTALL_DIR}/binary
 

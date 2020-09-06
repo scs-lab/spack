@@ -1,0 +1,110 @@
+[+] /opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/opt/spack/linux-centos7-haswell/gcc-4.8.5/libsigsegv-2.12-berxxhaywao2vbldk5tb2u22usqu5axn
+[+] /opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/opt/spack/linux-centos7-haswell/gcc-4.8.5/pkgconf-1.7.3-kdnclep543o3tilvpeucbub5leid4hwe
+[+] /opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/opt/spack/linux-centos7-haswell/gcc-4.8.5/zlib-1.2.11-khrizvmqgljwdjs7ctt3htdbr4bd3sbs
+==> Installing m4
+==> No binary for m4 found: installing from source
+==> Warning: gcc@4.8.5 cannot build optimized binaries for "skylake_avx512". Using best target possible: "haswell"
+==> Using cached archive: /opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/var/spack/cache/_source-cache/archive/ab/ab2633921a5cd38e48797bf5521ad259bdc4b979078034a3b790d7fec5493fab.tar.gz
+==> Using cached archive: /opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/var/spack/cache/_source-cache/archive/fc/fc9b61654a3ba1a8d6cd78ce087e7c96366c290bc8d2c299f09828d793b853c8
+==> m4: Executing phase: 'autoreconf'
+==> m4: Executing phase: 'configure'
+==> m4: Executing phase: 'build'
+==> m4: Executing phase: 'install'
+[+] /opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/opt/spack/linux-centos7-haswell/gcc-4.8.5/m4-1.4.18-ty4dfnbgnf47nteq2vazf4gtynyfzy7u
+==> Installing ncurses
+==> No binary for ncurses found: installing from source
+==> Fetching https://spack-llnl-mirror.s3-us-west-2.amazonaws.com/_source-cache/archive/30/30306e0c76e0f9f1f0de987cf1c82a5c21e1ce6568b9227f7da5b71cbea86c9d.tar.gz
+==> ncurses: Executing phase: 'autoreconf'
+==> ncurses: Executing phase: 'configure'
+==> ncurses: Executing phase: 'build'
+==> ncurses: Executing phase: 'install'
+[+] /opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/opt/spack/linux-centos7-haswell/gcc-4.8.5/ncurses-6.2-rjabos5ljft2dwb3lclqkiozclnk3b4s
+==> Installing libtool
+==> No binary for libtool found: installing from source
+==> Fetching https://spack-llnl-mirror.s3-us-west-2.amazonaws.com/_source-cache/archive/e3/e3bd4d5d3d025a36c21dd6af7ea818a2afcd4dfc1ea5a17b39d7854bcd0c06e3.tar.gz
+==> libtool: Executing phase: 'autoreconf'
+==> libtool: Executing phase: 'configure'
+==> libtool: Executing phase: 'build'
+==> libtool: Executing phase: 'install'
+[+] /opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/opt/spack/linux-centos7-haswell/gcc-4.8.5/libtool-2.4.6-mw3ksza6ko6zy76nwnkik5utoam5ulhk
+==> Installing readline
+==> No binary for readline found: installing from source
+==> Fetching https://spack-llnl-mirror.s3-us-west-2.amazonaws.com/_source-cache/archive/e3/e339f51971478d369f8a053a330a190781acb9864cf4c541060f12078948e461.tar.gz
+==> readline: Executing phase: 'autoreconf'
+==> readline: Executing phase: 'configure'
+==> readline: Executing phase: 'build'
+==> readline: Executing phase: 'install'
+[+] /opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/opt/spack/linux-centos7-haswell/gcc-4.8.5/readline-8.0-3kc62qsxjofff4arwxycrtue5hjthrmh
+==> Installing gdbm
+==> No binary for gdbm found: installing from source
+==> Fetching https://spack-llnl-mirror.s3-us-west-2.amazonaws.com/_source-cache/archive/86/86e613527e5dba544e73208f42b78b7c022d4fa5a6d5498bf18c8d6f745b91dc.tar.gz
+==> gdbm: Executing phase: 'autoreconf'
+==> gdbm: Executing phase: 'configure'
+==> gdbm: Executing phase: 'build'
+==> gdbm: Executing phase: 'install'
+[+] /opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/opt/spack/linux-centos7-haswell/gcc-4.8.5/gdbm-1.18.1-twzdjfuhmbhp5tpnzzokd67onz3ifn24
+==> Installing perl
+==> No binary for perl found: installing from source
+==> Fetching https://spack-llnl-mirror.s3-us-west-2.amazonaws.com/_source-cache/archive/32/32e04c8bb7b1aecb2742a7f7ac0eabac100f38247352a73ad7fa104e39e7406f.tar.gz
+==> Fetching https://spack-llnl-mirror.s3-us-west-2.amazonaws.com/_source-cache/archive/9d/9da50e155df72bce55cb69f51f1dbb4b62d23740fb99f6178bb27f22ebdf8a46.tar.gz
+==> Moving resource stage
+	source : /tmp/hdevarajan/spack-stage/resource-cpanm-6bd2ndafmmcnvmqakn7rcikd7m2jrqtr/spack-src/
+	destination : /tmp/hdevarajan/spack-stage/spack-stage-perl-5.30.3-6bd2ndafmmcnvmqakn7rcikd7m2jrqtr/spack-src/cpanm/cpanm
+==> perl: Executing phase: 'configure'
+==> perl: Executing phase: 'build'
+==> perl: Executing phase: 'install'
+[+] /opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/opt/spack/linux-centos7-haswell/gcc-4.8.5/perl-5.30.3-6bd2ndafmmcnvmqakn7rcikd7m2jrqtr
+==> Installing autoconf
+==> No binary for autoconf found: installing from source
+==> Fetching https://spack-llnl-mirror.s3-us-west-2.amazonaws.com/_source-cache/archive/95/954bd69b391edc12d6a4a51a2dd1476543da5c6bbf05a95b59dc0dd6fd4c2969.tar.gz
+==> autoconf: Executing phase: 'autoreconf'
+==> autoconf: Executing phase: 'configure'
+==> autoconf: Executing phase: 'build'
+==> autoconf: Executing phase: 'install'
+[+] /opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/opt/spack/linux-centos7-haswell/gcc-4.8.5/autoconf-2.69-lofa2cvwczvnm4dcpk5vy45fsiewvppm
+==> Installing automake
+==> No binary for automake found: installing from source
+==> Fetching https://spack-llnl-mirror.s3-us-west-2.amazonaws.com/_source-cache/archive/b2/b2f361094b410b4acbf4efba7337bdb786335ca09eb2518635a09fb7319ca5c1.tar.gz
+==> automake: Executing phase: 'autoreconf'
+==> automake: Executing phase: 'configure'
+==> automake: Executing phase: 'build'
+==> automake: Executing phase: 'install'
+[+] /opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/opt/spack/linux-centos7-haswell/gcc-4.8.5/automake-1.16.2-xz66f2mhdwi6mcbfi6b2ouvtoq46r2vx
+==> Installing gmp
+==> No binary for gmp found: installing from source
+==> Fetching https://spack-llnl-mirror.s3-us-west-2.amazonaws.com/_source-cache/archive/52/5275bb04f4863a13516b2f39392ac5e272f5e1bb8057b18aec1c9b79d73d8fb2.tar.bz2
+==> gmp: Executing phase: 'autoreconf'
+==> gmp: Executing phase: 'configure'
+==> gmp: Executing phase: 'build'
+==> gmp: Executing phase: 'install'
+[+] /opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/opt/spack/linux-centos7-haswell/gcc-4.8.5/gmp-6.1.2-dzfc6azfblscsurp35ctrj3cwymt234c
+==> Installing isl
+==> No binary for isl found: installing from source
+==> Fetching https://spack-llnl-mirror.s3-us-west-2.amazonaws.com/_source-cache/archive/b5/b587e083eb65a8b394e833dea1744f21af3f0e413a448c17536b5549ae42a4c2.tar.bz2
+==> isl: Executing phase: 'autoreconf'
+==> isl: Executing phase: 'configure'
+==> isl: Executing phase: 'build'
+==> isl: Executing phase: 'install'
+[+] /opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/opt/spack/linux-centos7-haswell/gcc-4.8.5/isl-0.20-s5qijq72uy455vtefgle6jiw6s5zijfw
+==> Installing mpfr
+==> No binary for mpfr found: installing from source
+==> Fetching https://spack-llnl-mirror.s3-us-west-2.amazonaws.com/_source-cache/archive/cf/cf4f4b2d80abb79e820e78c8077b6725bbbb4e8f41896783c899087be0e94068.tar.bz2
+==> Fetching https://spack-llnl-mirror.s3-us-west-2.amazonaws.com/_source-cache/archive/7a/7a6dd71bcda4803d6b89612706a17b8816e1acd5dd9bf1bec29cf748f3b60008
+==> mpfr: Executing phase: 'autoreconf'
+==> mpfr: Executing phase: 'configure'
+==> mpfr: Executing phase: 'build'
+==> mpfr: Executing phase: 'install'
+[+] /opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/opt/spack/linux-centos7-haswell/gcc-4.8.5/mpfr-3.1.6-smivd5vvwie3syjv5yykl7mgfvlehrlb
+==> Installing mpc
+==> No binary for mpc found: installing from source
+==> Fetching https://spack-llnl-mirror.s3-us-west-2.amazonaws.com/_source-cache/archive/69/6985c538143c1208dcb1ac42cedad6ff52e267b47e5f970183a3e75125b43c2e.tar.gz
+==> mpc: Executing phase: 'autoreconf'
+==> mpc: Executing phase: 'configure'
+==> mpc: Executing phase: 'build'
+==> mpc: Executing phase: 'install'
+[+] /opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/opt/spack/linux-centos7-haswell/gcc-4.8.5/mpc-1.1.0-gsredvfotefiel3brmknnrqmcbdysb5u
+==> Installing gcc
+==> No binary for gcc found: installing from source
+==> Fetching https://spack-llnl-mirror.s3-us-west-2.amazonaws.com/_source-cache/archive/71/71e197867611f6054aa1119b13a0c0abac12834765fe2d81f35ac57f84f742d1.tar.xz
+==> gcc: Executing phase: 'autoreconf'
+==> gcc: Executing phase: 'configure'
