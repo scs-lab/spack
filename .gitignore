@@ -40,3 +40,4 @@ lib/spack/spack/test/.cache
 .devcontainer
 
 /binary
+/opt/share/**/*
