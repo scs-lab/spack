@@ -12,4 +12,4 @@
 # -------------------------------------------------------------------------
 repos:
   - $spack/var/spack/repos/builtin
-  - $spack/var/spack/repos/scs-io
+  - $spack/var/spack/repos/scs_io
