@@ -41,7 +41,7 @@ class Hcl(CMakePackage):
         # FIXME: Add arguments other than
         # FIXME: CMAKE_INSTALL_PREFIX and CMAKE_BUILD_TYPE
         # FIXME: If not needed delete this function
-        args = ['-DBUILD_SHARED_LIBS=1']
+        args = ['-DBUILD_SHARED_LIBS=1','-DBASKET_ENABLE_RPCLIB']
         return args
     def set_include(self,env,path):
         env.append_flags('CFLAGS', '-I{}'.format(path))
