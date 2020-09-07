@@ -516,12 +516,10 @@ class Boost(Package):
         if (sys.platform == 'darwin') and ('+shared' in spec):
             fix_darwin_install_name(prefix.lib)
     def set_include(self,env,path):
-        env.prepend_path('C_INCLUDE_PATH', path)
         env.append_flags('CFLAGS', '-I{}'.format(path))
-        env.prepend_path('CPLUS_INCLUDE_PATH', path)
         env.append_flags('CXXFLAGS', '-I{}'.format(path))
     def set_lib(self,env,path):
-        env.prepend_path('LIBRARY_PATH', path)
+        env.prepend_path('LD_LIBRARY_PATH', path)
         env.append_flags('LDFLAGS', '-L{}'.format(path))
     def set_flags(self,env):
         self.set_include(env,'{}/include'.format(self.prefix))

@@ -45,9 +45,25 @@ class Symbios(CMakePackage):
     depends_on('redis-server', when='@master')
 
     def cmake_args(self):
-        # FIXME: Add arguments other than
-        # FIXME: CMAKE_INSTALL_PREFIX and CMAKE_BUILD_TYPE
-        # FIXME: If not needed delete this function
         args = ['-DCMAKE_INSTALL_PREFIX={}'.format(self.prefix),
                 '-DCMAKE_INSTALL_INCLUDEDIR={}/include'.format(self.prefix)]
         return args
+    def set_include(self, env, path):
+        env.append_flags('CFLAGS', '-I{}'.format(path))
+        env.append_flags('CXXFLAGS', '-I{}'.format(path))
+
+    def set_lib(self, env, path):
+        env.prepend_path('LD_LIBRARY_PATH', path)
+        env.append_flags('LDFLAGS', '-L{}'.format(path))
+
+    def set_flags(self, env):
+        self.set_include(env, '{}/include'.format(self.prefix))
+        self.set_include(env, '{}/include'.format(self.prefix))
+        self.set_lib(env, '{}/lib'.format(self.prefix))
+        self.set_lib(env, '{}/lib64'.format(self.prefix))
+
+    def setup_dependent_environment(self, spack_env, run_env, dependent_spec):
+        self.set_flags(spack_env)
+
+    def setup_run_environment(self, env):
+        self.set_flags(env)
