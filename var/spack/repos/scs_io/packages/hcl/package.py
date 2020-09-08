@@ -38,10 +38,8 @@ class Hcl(CMakePackage):
     depends_on('boost@1.74.0', when='@0.0.4')
 
     def cmake_args(self):
-        # FIXME: Add arguments other than
-        # FIXME: CMAKE_INSTALL_PREFIX and CMAKE_BUILD_TYPE
-        # FIXME: If not needed delete this function
-        args = ['-DBUILD_SHARED_LIBS=1','-DBASKET_ENABLE_RPCLIB=1','-DCMAKE_INSTALL_PREFIX={}'.format(self.prefix)]
+        args = ['-DCMAKE_INSTALL_PREFIX={}'.format(self.prefix),
+                '-DBASKET_ENABLE_RPCLIB=ON']
         return args
     def set_include(self,env,path):
         env.append_flags('CFLAGS', '-I{}'.format(path))
