@@ -35,3 +35,7 @@ spack load rapidjson@1.1.0%gcc@9.3.0
 spack load hiredis@1.0.0%gcc@9.3.0
 spack load openblas@0.3.10%gcc@9.3.0
 spack load rpclib@2.2.1%gcc@9.3.0
+
+export CXXFLAGS="-I/opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/var/spack/environments/symbios/.spack-env/view/include -I/opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/var/spack/environments/symbios/.spack-env/view/include/bsoncxx/v_noabi -I/opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/var/spack/environments/symbios/.spack-env/view/include/mongocxx/v_noabi"
+export LDFLAGS="-L/opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/var/spack/environments/symbios/.spack-env/view/lib -L/opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/var/spack/environments/symbios/.spack-env/view/lib64"
+export LD_LIBRARY_PATH=/opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/var/spack/environments/symbios/.spack-env/view/lib:/opt/ohpc/pub/software/hdevarajan/spack/v0.15.4.scs/var/spack/environments/symbios/.spack-env/view/lib64
