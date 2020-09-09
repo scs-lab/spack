@@ -33,7 +33,7 @@ mkdir -p $SPACK_INSTALL_DIR
 
 
 echo "[INFO] Installing spack"
-cp -r ${REPO_DIR}/* $SPACK_INSTALL_DIR/
+cp -r ${REPO_DIR}/. $SPACK_INSTALL_DIR/
 
 ./install_client.sh $SPACK_INSTALL_DIR_ORIG
 
