@@ -19,7 +19,7 @@ VERSION=`git branch | awk '{print$2}'  | sed ':a;N;$!ba;s/\n//g'`
 SPACK_INSTALL_DIR=$SPACK_INSTALL_DIR_ORIG/$VERSION
 
 echo "[INFO] Updating bashrc with spack env."
-echo "export PATH=$SPACK_INSTALL_DIR/bin:$PATH" >> ~/.bashrc
+echo "export PATH=$SPACK_INSTALL_DIR/bin:\$PATH" >> ~/.bashrc
 echo "export spack=$SPACK_INSTALL_DIR" >> ~/.bashrc
 echo ". $SPACK_INSTALL_DIR/share/spack/setup-env.sh" >> ~/.bashrc
 

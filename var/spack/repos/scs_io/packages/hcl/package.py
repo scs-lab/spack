@@ -28,10 +28,11 @@ class Hcl(CMakePackage):
 
     homepage = "https://www.example.com"
     url     = "https://bitbucket.org/scs-io/hcl/get/master.tar.bz2"
-
+    git     = "https://bitbucket.org/scs-io/hcl.git"
     # notify when the package is updated.
     # maintainers = ['github_user1', 'github_user2']
-    version('master', sha256='c364c1309c5159f96340b36444ad6ea9843c7b51f5af4846e675ba4a2ea32b4d')
+    version('master', sha256='2857965ed3df95cc87f23c6b7c53b9403ceb87504b7c2be88b1c68ea9525d381')
+    version('0.0.4', branch='0.0.4')
     depends_on('gcc@9.3.0')
     depends_on('mpich@3.3.2')
     depends_on('rpclib@2.2.1')
