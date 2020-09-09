@@ -27,15 +27,18 @@ class Hcl(CMakePackage):
     """FIXME: Put a proper description of your package here."""
 
     homepage = "https://www.example.com"
-    git      = "https://bitbucket.org/scs-io/hcl.git"
+    url     = "https://bitbucket.org/scs-io/hcl/get/master.tar.bz2"
 
     # notify when the package is updated.
     # maintainers = ['github_user1', 'github_user2']
-    version('0.0.4', branch='release/0.0.4')
-    depends_on('gcc@9.3.0', when='@0.0.4')
-    depends_on('mpich@3.3.2', when='@0.0.4')
-    depends_on('rpclib@2.2.1', when='@0.0.4')
-    depends_on('boost@1.74.0', when='@0.0.4')
+    version('master', sha256='c364c1309c5159f96340b36444ad6ea9843c7b51f5af4846e675ba4a2ea32b4d')
+    depends_on('gcc@9.3.0')
+    depends_on('mpich@3.3.2')
+    depends_on('rpclib@2.2.1')
+    depends_on('boost@1.74.0')
+    def url_for_version(self, version):
+        url = "https://bitbucket.org/scs-io/hcl/get/{0}.tar.bz2"
+        return url.format(version.dashed)
 
     def cmake_args(self):
         args = ['-DCMAKE_INSTALL_PREFIX={}'.format(self.prefix),
