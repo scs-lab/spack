@@ -33,8 +33,9 @@ mkdir -p $SPACK_INSTALL_DIR
 
 
 echo "[INFO] Installing spack"
-cp -r ${REPO_DIR}/* $SPACK_INSTALL_DIR/
+#tar cvf - ${REPO_DIR}/. | (cd $SPACK_INSTALL_DIR/; tar xvf -)
+
+cp -r ${REPO_DIR}/.* $SPACK_INSTALL_DIR/
 
 ./install_client.sh $SPACK_INSTALL_DIR_ORIG
-
 echo "[WARNING] if you ran spack multiple times please clean your bashrc."
