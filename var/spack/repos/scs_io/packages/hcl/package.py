@@ -31,11 +31,11 @@ class Hcl(CMakePackage):
 
     # notify when the package is updated.
     # maintainers = ['github_user1', 'github_user2']
-    version('0.0.4', branch='release/0.0.4')
-    depends_on('gcc@9.3.0', when='@0.0.4')
-    depends_on('mpich@3.3.2', when='@0.0.4')
-    depends_on('rpclib@2.2.1', when='@0.0.4')
-    depends_on('boost@1.74.0', when='@0.0.4')
+    version('master', branch='master')
+    depends_on('gcc@9.3.0', when='@master')
+    depends_on('mpich@3.3.2', when='@master')
+    depends_on('rpclib@2.2.1', when='@master')
+    depends_on('boost@1.74.0', when='@master')
 
     def cmake_args(self):
         args = ['-DCMAKE_INSTALL_PREFIX={}'.format(self.prefix),
