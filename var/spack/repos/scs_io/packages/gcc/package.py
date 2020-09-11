@@ -92,6 +92,10 @@ class Gcc(AutotoolsPackage, GNUMirrorPackage):
     variant('nvptx',
             default=False,
             description='Target nvptx offloading to NVIDIA GPUs')
+    
+    variant('march',
+            default='x86-64',
+            description='Instructions for the machine type cpu-type')
 
     depends_on('flex', type='build', when='@master')
 
@@ -307,6 +311,7 @@ class Gcc(AutotoolsPackage, GNUMirrorPackage):
     def configure_args(self):
         spec = self.spec
 
+    
         # Generic options to compile GCC
         options = [
             # Distributor options
@@ -316,6 +321,7 @@ class Gcc(AutotoolsPackage, GNUMirrorPackage):
             '--disable-multilib',
             '--enable-languages={0}'.format(
                 ','.join(spec.variants['languages'].value)),
+            '-march={}'.format(spec.variants['march'].value),
             # Drop gettext dependency
             '--disable-nls',
             '--with-mpfr={0}'.format(spec['mpfr'].prefix),
