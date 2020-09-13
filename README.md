@@ -24,6 +24,14 @@ See the
 [Feature Overview](http://spack.readthedocs.io/en/latest/features.html)
 for examples and highlights.
 
+
+SCS
+----------------
+To install the fork:
+
+    $ git clone  https://github.com/scs-lab/spack.git
+    $ git branch -u origin/v0.15.4.scs
+
 To install spack and your first package, make sure you have Python.
 Then:
 
@@ -36,12 +44,6 @@ Documentation
 
 [**Full documentation**](http://spack.readthedocs.io/) is available, or
 run `spack help` or `spack help --all`.
-
-SCS
-----------------
-git clone  https://github.com/scs-lab/spack.git
-git branch -u origin/v0.15.4.scs
-
 
 Tutorial
 ----------------
