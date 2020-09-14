@@ -25,7 +25,7 @@ config:
 
 
   # Default directory layout
-  install_path_scheme: "${ARCHITECTURE}/${COMPILERNAME}-${COMPILERVER}/${PACKAGE}-${VERSION}"
+  install_path_scheme: "${ARCHITECTURE}/${COMPILERNAME}-${COMPILERVER}/${PACKAGE}/${VERSION}"
 
 
   # Locations where different types of modules should be installed.

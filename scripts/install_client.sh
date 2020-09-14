@@ -1,8 +1,8 @@
 #!/bin/bash
 if [ $# -lt 1 ]
 then
-  echo "Usage: ./install.sh <install_dir>"
-  echo "e.g ./install.sh /opt/ohpc/pub/software/hdevarajan/spack/0.15.4"
+  echo "Usage: ./install_client.sh <install_dir>"
+  echo "e.g ./install_client.sh /opt/ohpc/pub/software/hdevarajan/spack/0.15.4"
   exit
 fi
 

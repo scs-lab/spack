@@ -92,6 +92,10 @@ class Gcc(AutotoolsPackage, GNUMirrorPackage):
     variant('nvptx',
             default=False,
             description='Target nvptx offloading to NVIDIA GPUs')
+    
+    #variant('arch',
+    #        default='x86-64',
+    #        description='Specify which cpu variant the compiler should generate code for by default.')
 
     depends_on('flex', type='build', when='@master')
 
@@ -307,6 +311,7 @@ class Gcc(AutotoolsPackage, GNUMirrorPackage):
     def configure_args(self):
         spec = self.spec
 
+    
         # Generic options to compile GCC
         options = [
             # Distributor options
@@ -314,6 +319,7 @@ class Gcc(AutotoolsPackage, GNUMirrorPackage):
             '--with-bugurl=https://github.com/spack/spack/issues',
             # Xcode 10 dropped 32-bit support
             '--disable-multilib',
+        #    '--with-arch={}'.format(spec.variants['arch'].value),
             '--enable-languages={0}'.format(
                 ','.join(spec.variants['languages'].value)),
             # Drop gettext dependency
