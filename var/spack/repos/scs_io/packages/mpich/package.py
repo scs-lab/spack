@@ -67,6 +67,7 @@ class Mpich(AutotoolsPackage):
         # For Cray MPIs, the regular compiler wrappers *are* the MPI wrappers.
         # Cray MPIs always have cray in the module name, e.g. "cray-mpich"
         external_modules = self.spec.external_modules
+        self.set_flags(env) 
         if external_modules and 'cray' in external_modules[0]:
             env.set('MPICC', spack_cc)
             env.set('MPICXX', spack_cxx)
@@ -110,3 +111,20 @@ class Mpich(AutotoolsPackage):
             join_path(self.prefix.lib, 'libmpicxx.{0}'.format(dso_suffix)),
             join_path(self.prefix.lib, 'libmpi.{0}'.format(dso_suffix))
         ]
+    def cmake_args(self):
+        args = ['-DCMAKE_INSTALL_PREFIX={}'.format(self.prefix),
+                '-DBASKET_ENABLE_RPCLIB=ON']
+        return args
+    def set_include(self,env,path):
+        env.append_flags('CFLAGS', '-I{}'.format(path))
+        env.append_flags('CXXFLAGS', '-I{}'.format(path))
+    def set_lib(self,env,path):
+        env.prepend_path('LD_LIBRARY_PATH', path)
+        env.append_flags('LDFLAGS', '-L{}'.format(path))
+    def set_flags(self,env):
+        self.set_include(env,'{}/include'.format(self.prefix))
+        self.set_include(env,'{}/include'.format(self.prefix))
+        self.set_lib(env,'{}/lib'.format(self.prefix))
+        self.set_lib(env,'{}/lib64'.format(self.prefix))
+    def setup_dependent_environment(self, spack_env, run_env, dependent_spec):
+        self.set_flags(spack_env)
