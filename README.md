@@ -27,11 +27,15 @@ for examples and highlights.
 
 SCS
 ----------------
-To install the fork:
+To install the fork, you need to have python installed and then:
 
     $ git clone  https://github.com/scs-lab/spack.git
     $ git branch -u origin/v0.15.4.scs
+To run install packages in spack, a compiler needs to be provided by the systems.
+Current packages require gcc and in some cases gfortran.
 
+SPACK
+----------------
 To install spack and your first package, make sure you have Python.
 Then:
 
