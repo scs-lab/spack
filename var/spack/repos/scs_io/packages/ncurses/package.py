@@ -101,6 +101,9 @@ class Ncurses(AutotoolsPackage, GNUMirrorPackage):
         headers = glob(join(prefix.include, '*'))
         for p_dir in ['ncurses', 'ncursesw']:
             path = join(prefix.include, p_dir)
+            import shutil 
+            if exists(path):
+                shutil.rmtree(path)
             if not exists(path):
                 makedirs(path)
             for header in headers:

@@ -37,6 +37,11 @@ class Pkgconf(AutotoolsPackage):
 
     @run_after('install')
     def link_pkg_config(self):
+        import os
+        if os.path.exists('{0}/pkg-config'.format(self.prefix.bin)):
+            os.remove('{0}/pkg-config'.format(self.prefix.bin))
+        if os.path.exists('{0}/pkg-config.1'.format(self.prefix.share.man.man1)):
+            os.remove('{0}/pkg-config.1'.format(self.prefix.share.man.man1))
         symlink('pkgconf', '{0}/pkg-config'.format(self.prefix.bin))
         symlink('pkgconf.1',
                 '{0}/pkg-config.1'.format(self.prefix.share.man.man1))

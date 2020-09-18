@@ -59,6 +59,9 @@ class Libtool(AutotoolsPackage, GNUMirrorPackage):
         # platforms, build systems sometimes expect to use the assumed
         # GNU commands glibtool and glibtoolize instead of the BSD
         # variant; this happens frequently, for instance, on Darwin
+        import os
+        os.remove(join_path(self.prefix.bin, 'glibtool'))
+        os.remove(join_path(self.prefix.bin, 'glibtoolize'))
         symlink(join_path(self.prefix.bin, 'libtool'),
                 join_path(self.prefix.bin, 'glibtool'))
         symlink(join_path(self.prefix.bin, 'libtoolize'),
