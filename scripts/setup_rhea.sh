@@ -1,7 +1,7 @@
 #!/bin/bash
 spack install boost@1.74.0%gcc@9.3.0
 spack install cmake@3.17.3%gcc@9.3.0
-spack install mpich@3.3.2%gcc@9.3.0
+spack install openmpi@4.0.5%gcc@9.3.0
 spack install rapidjson@1.1.0%gcc@9.3.0
 spack install hcl@master%gcc@9.3.0
 
@@ -10,14 +10,14 @@ spack env activate rhea
 
 spack install boost@1.74.0%gcc@9.3.0
 spack install cmake@3.17.3%gcc@9.3.0
-spack install mpich@3.3.2%gcc@9.3.0
+spack install openmpi@4.0.5%gcc@9.3.0
 spack install rapidjson@1.1.0%gcc@9.3.0
 spack install hcl@master%gcc@9.3.0
 
 spack load boost@1.74.0%gcc@9.3.0
 spack load cmake@3.17.3%gcc@9.3.0
 spack load hcl@master%gcc@9.3.0
-spack load mpich@3.3.2%gcc@9.3.0
+spack load openmpi@4.0.5%gcc@9.3.0
 spack load rapidjson@1.1.0%gcc@9.3.0
 spack load rpclib@2.2.1%gcc@9.3.0
 
