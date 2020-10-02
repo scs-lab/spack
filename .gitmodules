@@ -1,0 +1,3 @@
+[submodule "var/spack/repos/sds-repo"]
+	path = var/spack/repos/sds-repo
+	url = https://xgitlab.cels.anl.gov/sds/sds-repo.git
