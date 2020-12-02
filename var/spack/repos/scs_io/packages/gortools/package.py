@@ -37,13 +37,17 @@ class Gortools(MakefilePackage):
     version('7.8', sha256='d93a9502b18af51902abd130ff5f23768fcf47e266e6d1f34b3586387aa2de68')
     version('7.0', sha256='379c13c9a5ae70bf0e876763005b2d2d51fcf966882b28b1a65344f2d3d2c589')
     depends_on('gcc')
+    depends_on('gflags')
     
     def url_for_version(self, version):
         url = "https://github.com/google/or-tools/archive/v{}.tar.gz"
-        return url.format(version.dashed)
+        return url.format(version)
+    def build(self, spec, prefix):
+        #with working_dir('spack-build', create=True):
+        make('third_party')
+        make('cc')
     def install(self, spec, prefix):
         with working_dir('spack-build', create=True):
-            make('cc')
             make('install DESTDIR=%s' % prefix)
     def set_include(self,env,path):
         env.append_flags('CFLAGS', '-I{}'.format(path))
