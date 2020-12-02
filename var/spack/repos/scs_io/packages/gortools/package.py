@@ -46,10 +46,11 @@ class Gortools(Package):
     #    args = ['-DCMAKE_INSTALL_PREFIX={}'.format(self.prefix),'-DBUILD_DEPS:BOOL=ON']
     #    return args
     def install(self, spec, prefix):
+        options = ['prefix=%s' % prefix]
         #with working_dir('spack-build', create=True):
         make('third_party')
         make('cc')
-        make('install_cc prefix=%s' % prefix)
+        make('install_cc', *options)
     def set_include(self,env,path):
         env.append_flags('CFLAGS', '-I{}'.format(path))
         env.append_flags('CXXFLAGS', '-I{}'.format(path))
