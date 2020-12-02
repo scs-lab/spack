@@ -23,7 +23,7 @@
 from spack import *
 
 
-class Gortools(MakefilePackage):
+class Gortools(Package):
     
     homepage = "https://developers.google.com/optimization/install/cpp"
     version('8.0', sha256='ac01d7ebde157daaeb0e21ce54923a48e4f1d21faebd0b08a54979f150f909ee')
@@ -42,13 +42,14 @@ class Gortools(MakefilePackage):
     def url_for_version(self, version):
         url = "https://github.com/google/or-tools/archive/v{}.tar.gz"
         return url.format(version)
-    def build(self, spec, prefix):
+    #def cmake_args(self):
+    #    args = ['-DCMAKE_INSTALL_PREFIX={}'.format(self.prefix),'-DBUILD_DEPS:BOOL=ON']
+    #    return args
+    def install(self, spec, prefix):
         #with working_dir('spack-build', create=True):
         make('third_party')
         make('cc')
-    def install(self, spec, prefix):
-        with working_dir('spack-build', create=True):
-            make('install DESTDIR=%s' % prefix)
+        make('install_cc prefix=%s' % prefix)
     def set_include(self,env,path):
         env.append_flags('CFLAGS', '-I{}'.format(path))
         env.append_flags('CXXFLAGS', '-I{}'.format(path))
